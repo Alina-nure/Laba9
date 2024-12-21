@@ -2,7 +2,7 @@
 
 namespace MathLibrary
 {
-    // Интерфейс для основных операций
+    
     public interface IBasicMath
     {
         double Add(double a, double b);
@@ -11,13 +11,13 @@ namespace MathLibrary
         double Divide(double a, double b);
     }
 
-    // Интерфейс для дополнительных операций
+    
     public interface IAdvancedMath
     {
         void TabulateExp();
     }
 
-    // Основной класс Math
+    
     public class Math : IBasicMath, IAdvancedMath
     {
         public double Add(double a, double b) => a + b;
@@ -44,7 +44,7 @@ namespace MathLibrary
 
     }
 
-    // Прокси-класс (Заступник)
+    
     public class MathProxy : IBasicMath, IAdvancedMath
     {
         private static MathProxy _instance;
